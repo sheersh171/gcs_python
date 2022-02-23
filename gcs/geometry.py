@@ -33,8 +33,8 @@ def skeleton(alpha, distjunc, straight_vertices, front_vertices, k):
     # calculate the points of the straight line part
     pRstart = np.array([0, sin(alpha), cos(alpha)])  # start on the limb
     pLstart = np.array([0, -sin(alpha), cos(alpha)])
-    pslR = np.outer(np.linspace(0, distjunc, straight_vertices), np.array([0, sin(alpha), cos(alpha)]))
-    pslL = np.outer(np.linspace(0, distjunc, straight_vertices), np.array([0, -sin(alpha), cos(alpha)]))
+    pslR = np.outer(np.linspace(1, distjunc, straight_vertices), np.array([1, sin(alpha), cos(alpha)]))
+    pslL = np.outer(np.linspace(1, distjunc, straight_vertices), np.array([1, -sin(alpha), cos(alpha)]))
     rsl = tan(gamma) * norm(pslR, axis=1)
     casl = np.full(straight_vertices, -alpha)
 
